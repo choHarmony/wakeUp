@@ -1,5 +1,6 @@
 package com.example.heywakeup
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -19,6 +20,14 @@ class MainActivity : AppCompatActivity() {
         val dividerItemDecoration =
             DividerItemDecoration(recyclerView.context, LinearLayoutManager(this).orientation)
         recyclerView.addItemDecoration(dividerItemDecoration)
+
+        // main 화면에 툴바 넣기
+        setSupportActionBar(R.id.toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+    }
+
+    private fun setSupportActionBar(toolbar: Int) {
+        TODO("Not yet implemented")
     }
 
     // 액션버튼 메뉴 액션바에 넣기
@@ -27,6 +36,17 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item?.itemId) {
+            // toolbar 상단 플러스 버튼 누르면 알람 설정 페이지로 이동
+            R.id.addNewAlarm -> {
+                val intent = Intent(this, set_alarm::class.java)
+                startActivity(intent)
+                super.onOptionsItemSelected(item)
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
 
 
 }
