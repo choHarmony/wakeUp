@@ -12,5 +12,12 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:timePickerStyle">@style/TimepickerTheme</item>
     </style>
+
+    // spinner로 타임피커 모양 바꾸기
+    <style name="TimepickerTheme" parent="android:Widget.Material.Light.TimePicker">
+        <item name="android:timePickerMode">spinner</item>
+    </style>
+
 </resources>
