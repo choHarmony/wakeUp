@@ -5,15 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".set_alarm"
+    android:background="@color/littleblack"
     android:orientation="vertical">
 
     <TimePicker
         android:id="@+id/setTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="50dp"
+        android:theme="@style/ThemeOverlay.NumberPicker"/>
 
-    
+    <Button
+        android:id="@+id/alarmDaybtn"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="#00ff0000"
+        android:text="알람 요일 설정"/>
 
+    <Button
+        android:id="@+id/alarmTypebtn"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="#00ff0000"
+        android:text="문제 유형 설정"/>
+
+    <Button
+        android:id="@+id/addAlarmbtn"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="#00ff0000"
+        android:text="알람 추가하기"/>
 
 </LinearLayout>
