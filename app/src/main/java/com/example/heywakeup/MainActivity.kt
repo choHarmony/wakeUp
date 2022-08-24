@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import androidx.appcompat.app.ActionBar
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -40,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         return when (item?.itemId) {
             // toolbar 상단 플러스 버튼 누르면 알람 설정 페이지로 이동
             R.id.addNewAlarm -> {
-                val intent = Intent(this, set_alarm::class.java)
+                val intent = Intent(this, SetAlarm::class.java)
                 startActivity(intent)
                 super.onOptionsItemSelected(item)
             }
