@@ -40,6 +40,6 @@
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
         android:background="#00ff0000"
-        android:text="알람 추가하기"/>
+        android:text="알람 설정 완료"/>
 
 </LinearLayout>
